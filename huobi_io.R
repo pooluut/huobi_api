@@ -1,6 +1,6 @@
 library(rjson)
 
-python_install_path = 'python3'
+python_install_path = 'python'
 python_script_path = './huobi_io.py'
 DEBUG=FALSE
 
