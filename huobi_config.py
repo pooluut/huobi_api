@@ -1,0 +1,7 @@
+API_KEY = ''
+API_SECRET = ''
+
+DEBUG=False
+
+ACCOUNT_ID=
+
