@@ -12,7 +12,8 @@ get_market_kline <- function(period='1min', symbol='ethcny',long_pooling='false'
         symbol=symbol,
         long_pooling=long_pooling
         );
-    json_str <- paste('\'',toJSON(para_frame),'\'')
+    json_str <- paste(toJSON(para_frame))
+    json_str <- gsub(pattern='\"', replacement="\\\\\"", json_str)
     allargs=c(python_script_path,'get_market_kline','-s',json_str)
     if (DEBUG)
         cat(python_install_path,allargs,'\n')
@@ -31,7 +32,8 @@ get_market_depth <- function(type='step0', symbol='ethcny',long_pooling='false')
         symbol=symbol,
         long_pooling=long_pooling
         );
-    json_str <- paste('\'',toJSON(para_frame),'\'')
+    json_str <- paste(toJSON(para_frame))
+    json_str <- gsub(pattern='\"', replacement="\\\\\"", json_str)
     allargs=c(python_script_path,'get_market_depth','-s',json_str)
     if (DEBUG)
         cat(python_install_path,allargs,'\n')
@@ -50,7 +52,8 @@ get_market_trade <- function(symbol='ethcny',long_pooling='false')
         symbol=symbol,
         long_pooling=long_pooling
         );
-    json_str <- paste('\'',toJSON(para_frame),'\'')
+    json_str <- paste(toJSON(para_frame))
+    json_str <- gsub(pattern='\"', replacement="\\\\\"", json_str)
     allargs=c(python_script_path,'get_market_trade','-s',json_str)
     if (DEBUG)
         cat(python_install_path,allargs,'\n')
@@ -69,7 +72,8 @@ get_market_detail <- function(symbol='ethcny',long_pooling='false')
         symbol=symbol,
         long_pooling=long_pooling
         );
-    json_str <- paste('\'',toJSON(para_frame),'\'')
+    json_str <- paste(toJSON(para_frame))
+    json_str <- gsub(pattern='\"', replacement="\\\\\"", json_str)
     allargs=c(python_script_path,'get_market_detail','-s',json_str)
     if (DEBUG)
         cat(python_install_path,allargs,'\n')
@@ -111,7 +115,8 @@ get_order_info <-function(order_id)
     para_frame <- data.frame(
         order_id=order_id
         );
-    json_str <- paste('\'',toJSON(para_frame),'\'')
+    json_str <- paste(toJSON(para_frame))
+    json_str <- gsub(pattern='\"', replacement="\\\\\"", json_str)
     allargs=c(python_script_path,'get_order_info','-s',json_str)
     if (DEBUG)
         cat(python_install_path,allargs,'\n')
@@ -129,7 +134,8 @@ post_orders <- function(type, amount, price='3000000', symbol='ethcny')
         amount=amount,
         price=price
         );
-    json_str <- paste('\'',toJSON(para_frame),'\'')
+    json_str <- paste(toJSON(para_frame))
+    json_str <- gsub(pattern='\"', replacement="\\\\\"", json_str)
     allargs=c(python_script_path,'post_orders','-s',json_str)
     if (DEBUG)
         cat(python_install_path,allargs,'\n')
@@ -144,7 +150,8 @@ post_cancel_order <- function(order_id)
     para_frame <- data.frame(
         order_id=order_id
         );
-    json_str <- paste('\'',toJSON(para_frame),'\'')
+    json_str <- paste(toJSON(para_frame))
+    json_str <- gsub(pattern='\"', replacement="\\\\\"", json_str)
     allargs=c(python_script_path,'post_cancel_order','-s',json_str)
     if (DEBUG)
         cat(python_install_path,allargs,'\n')
@@ -159,7 +166,8 @@ get_order_matchresult <-function(order_id)
     para_frame <- data.frame(
         order_id=order_id
         );
-    json_str <- paste('\'',toJSON(para_frame),'\'')
+    json_str <- paste(toJSON(para_frame))
+    json_str <- gsub(pattern='\"', replacement="\\\\\"", json_str)
     allargs=c(python_script_path,'get_order_matchresult','-s',json_str)
     if (DEBUG)
         cat(python_install_path,allargs,'\n')
