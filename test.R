@@ -19,7 +19,7 @@ source('huobi_io.R')
 #    "vol": 成交额, 即 sum(每一笔成交价 * 该笔的成交量)
 #  }
 # =====================
-# print(get_market_kline(period='5min'))
+print(get_market_kline(period='5min'))
 
 
 

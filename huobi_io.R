@@ -2,7 +2,7 @@ library(rjson)
 
 python_install_path = 'python3'
 python_script_path = './huobi_io.py'
-DEBUG=TRUE
+DEBUG=FALSE
 
 
 get_market_kline <- function(period='1min', symbol='ethcny',long_pooling='false')
